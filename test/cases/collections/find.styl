@@ -1,0 +1,23 @@
+@import "fn/collections/find";
+
+is-even(num) {
+  return num % 2 is 0;
+}
+
+list = 3 7 5 4 2 11;
+hash = {
+  a: 3,
+  b: 7,
+  c: 5,
+  d: 4,
+  e: 2,
+  f: 11
+};
+
+#find-list {
+  foo: fn-find(list, is-even);
+}
+
+#find-hash {
+  foo: fn-find(hash, is-even);
+}

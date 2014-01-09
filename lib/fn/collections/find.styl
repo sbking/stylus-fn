@@ -1,0 +1,16 @@
+/**
+ * Looks through each value in the list, returning the first one that passes a
+ * truth test
+ */
+
+@import "../utility/identity";
+
+fn-find(list, iterator = null) {
+  iterator = iterator || fn-identity;
+
+  if list is a "object" {
+    return value if iterator(value, key) for key, value in list;
+  } else {
+    return value if iterator(value, index) for value, index in list;
+  }
+}
