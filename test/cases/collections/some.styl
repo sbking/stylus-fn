@@ -1,63 +1,91 @@
 @import "fn/collections/some"
 
-isEven(num) {
+is-even(num) {
   return num % 2 is 0;
 }
 
-listTrue = false true false;
-listFalse = false false false;
-listEven = 1 2 3;
-listOdd = 1 3 5;
+list-true = true true true;
+list-false = false false false;
+list-true-false = false true false;
+list-even = 2 4 6;
+list-odd = 1 3 5;
+list-even-odd = 1 2 3;
 
-hashTrue = {
-  a: false,
+hash-true = {
+  a: true,
   b: true,
-  c: false
-}
-hashFalse = {
+  c: true
+};
+hash-false = {
   a: false,
   b: false,
   c: false
-}
-hashEven = {
-  a: 1,
-  b: 2,
-  c: 3
 };
-hashOdd = {
+hash-true-false = {
+  a: false,
+  b: true,
+  c: false
+};
+hash-even = {
+  a: 2,
+  b: 4,
+  c: 6
+}
+hash-odd = {
   a: 1,
   b: 3,
   c: 5
 };
+hash-even-odd = {
+  a: 1,
+  b: 2,
+  c: 3
+};
 
 #some-list-true {
-  foo: fn-some(listTrue);
+  foo: fn-some(list-true);
 }
 
 #some-list-false {
-  foo: fn-some(listFalse);
+  foo: fn-some(list-false);
+}
+
+#some-list-true-false {
+  foo: fn-some(list-true-false);
 }
 
 #some-list-even {
-  foo: fn-some(listEven, isEven);
+  foo: fn-some(list-even, is-even);
 }
 
 #some-list-odd {
-  foo: fn-some(listOdd, isEven);
+  foo: fn-some(list-odd, is-even);
+}
+
+#some-list-even-odd {
+  foo: fn-some(list-even-odd, is-even);
 }
 
 #some-hash-true {
-  foo: fn-some(hashTrue);
+  foo: fn-some(hash-true);
 }
 
 #some-hash-false {
-  foo: fn-some(hashFalse);
+  foo: fn-some(hash-false);
+}
+
+#some-hash-true-false {
+  foo: fn-some(hash-true-false);
 }
 
 #some-hash-even {
-  foo: fn-some(hashEven, isEven);
+  foo: fn-some(hash-even, is-even);
 }
 
 #some-hash-odd {
-  foo: fn-some(hashOdd, isEven);
+  foo: fn-some(hash-odd, is-even);
+}
+
+#some-hash-even-odd {
+  foo: fn-some(hash-even-odd, is-even);
 }

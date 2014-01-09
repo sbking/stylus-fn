@@ -6,12 +6,20 @@
   foo: false;
 }
 
+#some-list-true-false {
+  foo: true;
+}
+
 #some-list-even {
   foo: true;
 }
 
 #some-list-odd {
   foo: false;
+}
+
+#some-list-even-odd {
+  foo: true;
 }
 
 #some-hash-true {
@@ -22,10 +30,18 @@
   foo: false;
 }
 
+#some-hash-true-false {
+  foo: true;
+}
+
 #some-hash-even {
   foo: true;
 }
 
 #some-hash-odd {
   foo: false;
+}
+
+#some-hash-even-odd {
+  foo: true;
 }
