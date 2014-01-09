@@ -1,0 +1,13 @@
+/**
+ * Reduce a list or hash map into a single value by passing/returning a memo
+ * value to/from an iterator function for each value in the collection.
+ */
+
+fn-reduce(list, iterator, memo) {
+  if list is a "object" {
+    memo = iterator(memo, value, key) for key, value in list;
+  } else {
+    memo = iterator(memo, value, key) for value, key in list;
+  }
+  return memo;
+}

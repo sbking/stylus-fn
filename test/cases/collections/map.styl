@@ -1,0 +1,28 @@
+@import "fn/collections/map"
+
+double(num) {
+  return num * 2;
+}
+
+list = 1 2 3;
+hash = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+
+#map-list-identity {
+  foo: fn-map(list);
+}
+
+#map-list-double {
+  foo: fn-map(list, double);
+}
+
+#map-hash-identity {
+  foo: fn-map(hash);
+}
+
+#map-hash-double {
+  foo: fn-map(hash, double);
+}

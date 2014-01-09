@@ -1,0 +1,27 @@
+{
+  "name": "stylus-fn",
+  "description": "Stylus utility functions inspired by underscore.js",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sbking/stylus-fn.git"
+  },
+  "dependencies": {
+    "stylus": ">0.37.0"
+  },
+  "devDependencies": {
+    "glob": "*",
+    "css": "*",
+    "mocha": "*",
+    "chai": "*"
+  },
+  "author": "Stephen King <stephen.brian.king@gmail.com>",
+  "main": "lib/stylus-fn.js",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}

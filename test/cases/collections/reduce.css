@@ -1,0 +1,15 @@
+#reduce-list {
+  foo: 6;
+}
+
+#reduce-list-memo {
+  foo: 16;
+}
+
+#reduce-hash {
+  foo: 6;
+}
+
+#reduce-hash-memo {
+  foo: 16;
+}

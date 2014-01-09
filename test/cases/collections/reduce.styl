@@ -1,0 +1,28 @@
+@import "fn/collections/reduce"
+
+add(x, y) {
+  return x + y;
+}
+
+list = 1 2 3;
+hash = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+
+#reduce-list {
+  foo: fn-reduce(list, add, 0);
+}
+
+#reduce-list-memo {
+  foo: fn-reduce(list, add, 10);
+}
+
+#reduce-hash {
+  foo: fn-reduce(hash, add, 0);
+}
+
+#reduce-hash-memo {
+  foo: fn-reduce(hash, add, 10);
+}

@@ -1,0 +1,4 @@
+--require chai
+--reporter spec
+--check-leaks
+test/runner.js

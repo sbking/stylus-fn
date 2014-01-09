@@ -1,0 +1,15 @@
+#map-list-identity {
+  foo: 1 2 3;
+}
+
+#map-list-double {
+  foo: 2 4 6;
+}
+
+#map-hash-identity {
+  foo: 1 2 3;
+}
+
+#map-hash-double {
+  foo: 2 4 6;
+}
