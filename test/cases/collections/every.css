@@ -1,0 +1,47 @@
+#every-list-true {
+  foo: true;
+}
+
+#every-list-false {
+  foo: false;
+}
+
+#every-list-true-false {
+  foo: false;
+}
+
+#every-list-even {
+  foo: true;
+}
+
+#every-list-odd {
+  foo: false;
+}
+
+#every-list-even-odd {
+  foo: false;
+}
+
+#every-hash-true {
+  foo: true;
+}
+
+#every-hash-false {
+  foo: false;
+}
+
+#every-hash-true-false {
+  foo: false;
+}
+
+#every-hash-even {
+  foo: true;
+}
+
+#every-hash-odd {
+  foo: false;
+}
+
+#every-hash-even-odd {
+  foo: false;
+}
