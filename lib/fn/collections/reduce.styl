@@ -3,11 +3,10 @@
  * value to/from an iterator function for each value in the collection.
  */
 
-fn-reduce(list, iterator, memo) {
-  if list is a "object" {
-    memo = iterator(memo, value, key) for key, value in list;
-  } else {
-    memo = iterator(memo, value, key) for value, key in list;
-  }
-  return memo;
-}
+fn-reduce(list, iterator, memo)
+  if list is a "object"
+    memo = iterator(memo, value, key) for key, value in list
+  else
+    memo = iterator(memo, value, key) for value, key in list
+
+  return memo

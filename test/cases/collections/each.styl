@@ -1,20 +1,17 @@
 @import "fn/collections/each"
 
-pair(value, key) {
-  {key}: value;
-}
+pair(value, key)
+  {key}: value
 
-list = 1 2 3;
+list = 1 2 3
 hash = {
-  a: 1,
-  b: 2,
+  a: 1
+  b: 2
   c: 3
-};
-
-#each-list {
-  fn-each(list, pair);
 }
 
-#each-hash {
-  fn-each(hash, pair);
-}
+#each-list
+  fn-each(list, pair)
+
+#each-hash
+  fn-each(hash, pair)

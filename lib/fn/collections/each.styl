@@ -2,10 +2,8 @@
  * Calls an iterator function with each element in an array or hash map.
  */
 
-fn-each(list, iterator) {
-  if list is a "object" {
-    iterator(value, key) for key, value in list;
-  } else {
-    iterator(value, key) for value, key in list;
-  }
-}
+fn-each(list, iterator)
+  if list is a "object"
+    iterator(value, key) for key, value in list
+  else
+    iterator(value, key) for value, key in list

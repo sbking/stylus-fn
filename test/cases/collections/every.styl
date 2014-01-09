@@ -1,91 +1,78 @@
 @import "fn/collections/every"
 
-is-even(num) {
-  return num % 2 is 0;
-}
+is-even(num)
+  return num % 2 is 0
 
-list-true = true true true;
-list-false = false false false;
-list-true-false = false true false;
-list-even = 2 4 6;
-list-odd = 1 3 5;
-list-even-odd = 1 2 3;
+list-true = true true true
+list-false = false false false
+list-true-false = false true false
+list-even = 2 4 6
+list-odd = 1 3 5
+list-even-odd = 1 2 3
 
 hash-true = {
-  a: true,
-  b: true,
+  a: true
+  b: true
   c: true
-};
+}
 hash-false = {
-  a: false,
-  b: false,
+  a: false
+  b: false
   c: false
-};
+}
 hash-true-false = {
-  a: false,
-  b: true,
+  a: false
+  b: true
   c: false
-};
+}
 hash-even = {
-  a: 2,
-  b: 4,
+  a: 2
+  b: 4
   c: 6
 }
 hash-odd = {
-  a: 1,
-  b: 3,
+  a: 1
+  b: 3
   c: 5
-};
+}
 hash-even-odd = {
-  a: 1,
-  b: 2,
+  a: 1
+  b: 2
   c: 3
-};
-
-#every-list-true {
-  foo: fn-every(list-true);
 }
 
-#every-list-false {
-  foo: fn-every(list-false);
-}
+#every-list-true
+  foo: fn-every(list-true)
 
-#every-list-true-false {
-  foo: fn-every(list-true-false);
-}
+#every-list-false
+  foo: fn-every(list-false)
 
-#every-list-even {
-  foo: fn-every(list-even, is-even);
-}
+#every-list-true-false
+  foo: fn-every(list-true-false)
 
-#every-list-odd {
-  foo: fn-every(list-odd, is-even);
-}
+#every-list-even
+  foo: fn-every(list-even, is-even)
 
-#every-list-even-odd {
-  foo: fn-every(list-even-odd, is-even);
-}
+#every-list-odd
+  foo: fn-every(list-odd, is-even)
 
-#every-hash-true {
-  foo: fn-every(hash-true);
-}
+#every-list-even-odd
+  foo: fn-every(list-even-odd, is-even)
 
-#every-hash-false {
-  foo: fn-every(hash-false);
-}
+#every-hash-true
+  foo: fn-every(hash-true)
 
-#every-hash-true-false {
-  foo: fn-every(hash-true-false);
-}
+#every-hash-false
+  foo: fn-every(hash-false)
 
-#every-hash-even {
-  foo: fn-every(hash-even, is-even);
-}
+#every-hash-true-false
+  foo: fn-every(hash-true-false)
 
-#every-hash-odd {
-  foo: fn-every(hash-odd, is-even);
-}
+#every-hash-even
+  foo: fn-every(hash-even, is-even)
 
-#every-hash-even-odd {
-  foo: fn-every(hash-even-odd, is-even);
-}
+#every-hash-odd
+  foo: fn-every(hash-odd, is-even)
+
+#every-hash-even-odd
+  foo: fn-every(hash-even-odd, is-even)

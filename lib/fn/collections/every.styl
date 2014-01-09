@@ -3,16 +3,15 @@
  * truth test.
  */
 
-@import "../utility/identity";
+@import "../utility/identity"
 
-fn-every(list, iterator = null) {
-  iterator = iterator || fn-identity;
+fn-every(list, iterator = null)
+  iterator = iterator or fn-identity
 
-  every = true;
-  if list is a "object" {
-    every = every and iterator(value, key) for key, value in list;
-  } else {
-    every = every and iterator(value, key) for value, key in list;
-  }
-  return every;
-}
+  every = true
+  if list is a "object"
+    every = every and iterator(value, key) for key, value in list
+  else
+    every = every and iterator(value, key) for value, key in list
+
+  return every

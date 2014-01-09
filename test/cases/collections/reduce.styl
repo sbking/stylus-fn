@@ -1,40 +1,32 @@
 @import "fn/collections/reduce"
 
-add(x, y) {
-  return x + y;
-}
+add(x, y)
+  return x + y
 
-keys(memo, value, key) {
-  return memo + key;
-}
+keys(memo, value, key)
+  return memo + key
 
-list = 1 2 3;
+list = 1 2 3
 hash = {
-  a: 1,
-  b: 2,
+  a: 1
+  b: 2
   c: 3
-};
-
-#reduce-list {
-  foo: fn-reduce(list, add, 0);
 }
 
-#reduce-list-memo {
-  foo: fn-reduce(list, add, 10);
-}
+#reduce-list
+  foo: fn-reduce(list, add, 0)
 
-#reduce-list-keys {
-  foo: unquote(fn-reduce(list, keys, ""));
-}
+#reduce-list-memo
+  foo: fn-reduce(list, add, 10)
 
-#reduce-hash {
-  foo: fn-reduce(hash, add, 0);
-}
+#reduce-list-keys
+  foo: unquote(fn-reduce(list, keys, ""))
 
-#reduce-hash-memo {
-  foo: fn-reduce(hash, add, 10);
-}
+#reduce-hash
+  foo: fn-reduce(hash, add, 0)
 
-#reduce-hash-keys {
-  foo: unquote(fn-reduce(hash, keys, ""));
-}
+#reduce-hash-memo
+  foo: fn-reduce(hash, add, 10)
+
+#reduce-hash-keys
+  foo: unquote(fn-reduce(hash, keys, ""))

@@ -3,16 +3,16 @@
  * through an iterator function.
  */
 
-@import "../utility/identity";
+@import "../utility/identity"
 
-fn-map(list, iterator = null) {
-  iterator = iterator || fn-identity;
+fn-map(list, iterator = null)
+  iterator = iterator or fn-identity
 
-  map = ();
-  if list is a "object" {
-    push(map, iterator(value, key)) for key, value in list;
-  } else {
-    push(map, iterator(value, key)) for value, key in list;
-  }
-  return map;
-}
+  map = ()
+
+  if list is a "object"
+    push(map, iterator(value, key)) for key, value in list
+  else
+    push(map, iterator(value, key)) for value, key in list
+
+  return map
