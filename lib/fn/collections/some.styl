@@ -1,0 +1,19 @@
+/**
+ * Returns true if any of the values in the list or hash map pass the iterator
+ * truth test.
+ */
+
+@import "../utility/identity";
+@import "each";
+
+fn-some(list, iterator = null) {
+  iterator = iterator || fn-identity;
+
+  some = false;
+  if list is a "object" {
+    some = some or iterator(value, key) for key, value in list;
+  } else {
+    some = some or iterator(value, key) for value, key in list;
+  }
+  return some;
+}

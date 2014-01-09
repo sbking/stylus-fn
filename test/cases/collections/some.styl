@@ -1,0 +1,63 @@
+@import "fn/collections/some"
+
+isEven(num) {
+  return num % 2 is 0;
+}
+
+listTrue = false true false;
+listFalse = false false false;
+listEven = 1 2 3;
+listOdd = 1 3 5;
+
+hashTrue = {
+  a: false,
+  b: true,
+  c: false
+}
+hashFalse = {
+  a: false,
+  b: false,
+  c: false
+}
+hashEven = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+hashOdd = {
+  a: 1,
+  b: 3,
+  c: 5
+};
+
+#some-list-true {
+  foo: fn-some(listTrue);
+}
+
+#some-list-false {
+  foo: fn-some(listFalse);
+}
+
+#some-list-even {
+  foo: fn-some(listEven, isEven);
+}
+
+#some-list-odd {
+  foo: fn-some(listOdd, isEven);
+}
+
+#some-hash-true {
+  foo: fn-some(hashTrue);
+}
+
+#some-hash-false {
+  foo: fn-some(hashFalse);
+}
+
+#some-hash-even {
+  foo: fn-some(hashEven, isEven);
+}
+
+#some-hash-odd {
+  foo: fn-some(hashOdd, isEven);
+}

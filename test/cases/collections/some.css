@@ -1,0 +1,31 @@
+#some-list-true {
+  foo: true;
+}
+
+#some-list-false {
+  foo: false;
+}
+
+#some-list-even {
+  foo: true;
+}
+
+#some-list-odd {
+  foo: false;
+}
+
+#some-hash-true {
+  foo: true;
+}
+
+#some-hash-false {
+  foo: false;
+}
+
+#some-hash-even {
+  foo: true;
+}
+
+#some-hash-odd {
+  foo: false;
+}
