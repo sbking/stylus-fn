@@ -4,6 +4,10 @@ add(x, y) {
   return x + y;
 }
 
+keys(memo, value, key) {
+  return memo + key;
+}
+
 list = 1 2 3;
 hash = {
   a: 1,
@@ -19,10 +23,18 @@ hash = {
   foo: fn-reduce(list, add, 10);
 }
 
+#reduce-list-keys {
+  foo: unquote(fn-reduce(list, keys, ""));
+}
+
 #reduce-hash {
   foo: fn-reduce(hash, add, 0);
 }
 
 #reduce-hash-memo {
   foo: fn-reduce(hash, add, 10);
+}
+
+#reduce-hash-keys {
+  foo: unquote(fn-reduce(hash, keys, ""));
 }
