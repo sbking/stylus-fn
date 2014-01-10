@@ -14,7 +14,8 @@
     "glob": "*",
     "css": "*",
     "mocha": "*",
-    "chai": "*"
+    "chai": "*",
+    "underscore": "*"
   },
   "author": "Stephen King <stephen.brian.king@gmail.com>",
   "main": "lib/stylus-fn.js",
