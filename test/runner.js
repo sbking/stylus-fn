@@ -35,7 +35,7 @@ describe("fn", function() {
             expected = css.normalize(fs.readFileSync(cssPath, "utf8"));
 
           stylus(fs.readFileSync(stylPath, "utf8"))
-            .use(fn)
+            .use(fn())
             .set("filename", stylPath)
             .define("url", stylus.url())
             .render(function(err, compiled) {
