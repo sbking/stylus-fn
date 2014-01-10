@@ -12,3 +12,6 @@ fn-reduce(list, iterator, memo)
     memo = iterator(memo, value, index) for value, index in list
 
   return memo
+
+fn-inject = fn-reduce
+fn-foldl = fn-reduce

@@ -13,3 +13,5 @@ fn-find(list, iterator = null)
     return value if iterator(value, key) for key, value in list
   else
     return value if iterator(value, index) for value, index in list
+
+fn-detect = fn-find
