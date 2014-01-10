@@ -1,0 +1,15 @@
+#reject-list-value {
+  foo: 3 7 5 11;
+}
+
+#reject-list-value-key {
+  foo: 3 7 5 4 2 11;
+}
+
+#reject-hash-value {
+  foo: 3 7 5 11 "foo" "bar";
+}
+
+#reject-list-value-key {
+  foo: 0 3 2 7 5 4 2 11;
+}
