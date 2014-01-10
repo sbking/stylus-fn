@@ -1,0 +1,28 @@
+@import "fn/types/is-hash"
+
+list = 1 2 3 4
+pairs-unit = (0 1) (1 2) (2 3) (3 4)
+pairs-ident = (foo "bar") (baz "qux")
+pairs-string = ("foo" "bar") ("baz" "qux")
+hash-ident = {
+  foo: "bar"
+  baz: "qux"
+}
+hash-string = {
+  "foo": "bar"
+  "baz": "qux"
+}
+hashes = {
+  foo: "bar"
+}, {
+  baz: "qux"
+}
+
+test
+  list: fn-is-hash(list)
+  pairs-unit: fn-is-hash(pairs-unit)
+  pairs-ident: fn-is-hash(pairs-ident)
+  pairs-string: fn-is-hash(pairs-string)
+  hash-ident: fn-is-hash(hash-ident)
+  hash-string: fn-is-hash(hash-string)
+  hashes: fn-is-hash(hashes)

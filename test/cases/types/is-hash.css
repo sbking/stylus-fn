@@ -1,0 +1,9 @@
+test {
+  list: false;
+  pairs-unit: false;
+  pairs-ident: false;
+  pairs-string: false;
+  hash-ident: true;
+  hash-string: true;
+  hashes: false;
+}

@@ -1,0 +1,9 @@
+/**
+ * Returns true if the value is a string or an identifier
+ */
+
+@import "is-ident"
+@import "is-string"
+
+fn-is-key(value)
+  return fn-is-string(value) or fn-is-ident(value)
