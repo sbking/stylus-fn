@@ -26,8 +26,14 @@ hash = {
 #reject-list-value-key
   foo: fn-reject(list, is-equal)
 
+#reject-list-identity
+  foo: fn-reject(list)
+
 #reject-hash-value
   foo: fn-reject(hash, is-even)
 
-#reject-list-value-key
+#reject-hash-value-key
   foo: fn-reject(hash, is-equal)
+
+#reject-hash-identity
+  foo: fn-reject(hash)
