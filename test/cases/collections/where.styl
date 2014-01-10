@@ -1,0 +1,31 @@
+@import "fn/collections/where"
+
+list = {
+  a: 1
+  b: 2
+  c: 3
+}, {
+  b: 3
+  c: 2
+  d: 4
+}, {
+  b: 2
+  c: 3
+  d: 4
+}, {
+  c: 3
+  d: 4
+  e: 5
+}
+
+props = {
+  b: 2
+  c: 3
+} 
+
+matches = fn-where(list, props)
+match = matches[1]
+
+#where
+  matches: length(matches)
+  {match}

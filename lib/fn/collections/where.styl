@@ -1,0 +1,23 @@
+/**
+ * Looks through each value in the list, returning a list of all the values
+ * that contain all of the key-value pairs listed in properties.
+ */
+
+@import "../types/is-hash"
+
+fn-where(list, properties)
+  items = ()
+
+  if fn-is-hash(list)
+    for listKey, listValue in list
+      match = true
+      for propKey, propValue in properties
+        match = match and listValue["" + propKey] is propValue
+      push(items, listValue) if match
+  else
+    for listValue in list
+      match = true
+      for propKey, propValue in properties
+        match = match and listValue["" + propKey] is propValue
+      push(items, listValue) if match
+  return items
