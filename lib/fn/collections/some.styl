@@ -3,13 +3,14 @@
  * truth test.
  */
 
+@import "../types/is-hash"
 @import "../utility/identity"
 
 fn-some(list, iterator = null)
   iterator = iterator or fn-identity
 
   some = false
-  if list is a "object"
+  if fn-is-hash(list)
     some = some or iterator(value, key) for key, value in list
   else
     some = some or iterator(value, index) for value, index in list

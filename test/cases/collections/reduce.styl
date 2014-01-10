@@ -3,7 +3,7 @@
 add(x, y)
   return x + y
 
-keys(memo, value, key)
+key-list(memo, value, key)
   return memo + key
 
 list = 1 2 3
@@ -20,7 +20,7 @@ hash = {
   foo: fn-reduce(list, add, 10)
 
 #reduce-list-keys
-  foo: unquote(fn-reduce(list, keys, ""))
+  foo: unquote(fn-reduce(list, key-list, ""))
 
 #reduce-hash
   foo: fn-reduce(hash, add, 0)
@@ -29,4 +29,4 @@ hash = {
   foo: fn-reduce(hash, add, 10)
 
 #reduce-hash-keys
-  foo: unquote(fn-reduce(hash, keys, ""))
+  foo: unquote(fn-reduce(hash, key-list, ""))

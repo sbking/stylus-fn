@@ -3,13 +3,14 @@
  * that pass the iterator truth test.
  */
 
+@import "../types/is-hash"
 @import "../utility/identity"
 
 fn-filter(list, iterator = null)
   iterator = iterator or fn-identity
 
   filter = ()
-  if list is a "object"
+  if fn-is-hash(list)
     push(filter, value) if iterator(value, key) for key, value in list
   else
     push(filter, value) if iterator(value, index) for value, index in list

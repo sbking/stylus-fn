@@ -3,13 +3,14 @@
  * (iterator) passes. The opposite of filter.
  */
 
+@import "../types/is-hash"
 @import "../utility/identity"
 
 fn-reject(list, iterator = null)
   iterator = iterator or fn-identity
 
   filter = ()
-  if list is a "object"
+  if fn-is-hash(list)
     push(filter, value) unless iterator(value, key) for key, value in list
   else
     push(filter, value) unless iterator(value, index) for value, index in list

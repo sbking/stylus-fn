@@ -3,12 +3,13 @@
  * truth test
  */
 
+@import "../types/is-hash"
 @import "../utility/identity"
 
 fn-find(list, iterator = null)
   iterator = iterator or fn-identity
 
-  if list is a "object"
+  if fn-is-hash(list)
     return value if iterator(value, key) for key, value in list
   else
     return value if iterator(value, index) for value, index in list

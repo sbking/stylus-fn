@@ -3,6 +3,7 @@
  * through an iterator function.
  */
 
+@import "../types/is-hash"
 @import "../utility/identity"
 
 fn-map(list, iterator = null)
@@ -10,7 +11,7 @@ fn-map(list, iterator = null)
 
   map = ()
 
-  if list is a "object"
+  if fn-is-hash(list)
     push(map, iterator(value, key)) for key, value in list
   else
     push(map, iterator(value, index)) for value, index in list

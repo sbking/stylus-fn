@@ -2,8 +2,10 @@
  * Calls an iterator function with each element in an array or hash map.
  */
 
+@import "../types/is-hash"
+
 fn-each(list, iterator)
-  if list is a "object"
+  if fn-is-hash(list)
     iterator(value, key) for key, value in list
   else
     iterator(value, index) for value, index in list

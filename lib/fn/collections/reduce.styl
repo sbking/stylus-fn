@@ -3,8 +3,10 @@
  * value to/from an iterator function for each value in the collection.
  */
 
+@import "../types/is-hash"
+
 fn-reduce(list, iterator, memo)
-  if list is a "object"
+  if fn-is-hash(list)
     memo = iterator(memo, value, key) for key, value in list
   else
     memo = iterator(memo, value, index) for value, index in list
