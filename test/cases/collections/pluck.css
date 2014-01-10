@@ -1,0 +1,3 @@
+#pluck {
+  foo: "moe" "larry" "curly";
+}

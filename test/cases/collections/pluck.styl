@@ -1,0 +1,15 @@
+@import "fn/collections/pluck"
+
+stooges = {
+  name: "moe"
+  age: 40
+}, {
+  name: "larry"
+  age: 50
+}, {
+  name: "curly"
+  age: 60
+}
+
+#pluck
+  foo: fn-pluck(stooges, "name")

@@ -1,0 +1,12 @@
+/**
+ * A convenient version of what is perhaps the most common use-case for map:
+ * extracting a list of property values.
+ */
+
+@import "map"
+
+fn-pluck(list, property)
+  property-of(object)
+    return object[property]
+  
+  return fn-map(list, property-of)
