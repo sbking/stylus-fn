@@ -1,0 +1,15 @@
+#filter-list-value {
+  foo: 0 2 4 2;
+}
+
+#filter-list-value-key {
+  foo: 0 2;
+}
+
+#filter-hash-value {
+  foo: 0 2 4 2;
+}
+
+#filter-list-value-key {
+  foo: "foo" "bar";
+}

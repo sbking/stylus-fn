@@ -1,0 +1,33 @@
+@import "fn/collections/filter"
+
+is-even(num)
+  return num % 2 is 0
+
+is-equal(value, other)
+  return value is other
+
+list = 0 3 2 7 5 4 2 11
+hash = {
+  a: 0
+  b: 3
+  c: 2
+  d: 7
+  e: 5
+  f: 4
+  g: 2
+  h: 11
+  "foo": "foo"
+  "bar": "bar"
+}
+
+#filter-list-value
+  foo: fn-filter(list, is-even)
+
+#filter-list-value-key
+  foo: fn-filter(list, is-equal)
+
+#filter-hash-value
+  foo: fn-filter(hash, is-even)
+
+#filter-list-value-key
+  foo: fn-filter(hash, is-equal)
