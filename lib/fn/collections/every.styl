@@ -12,6 +12,6 @@ fn-every(list, iterator = null)
   if list is a "object"
     every = every and iterator(value, key) for key, value in list
   else
-    every = every and iterator(value, key) for value, key in list
+    every = every and iterator(value, index) for value, index in list
 
   return every

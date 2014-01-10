@@ -6,4 +6,4 @@ fn-each(list, iterator)
   if list is a "object"
     iterator(value, key) for key, value in list
   else
-    iterator(value, key) for value, key in list
+    iterator(value, index) for value, index in list

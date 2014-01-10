@@ -7,6 +7,6 @@ fn-reduce(list, iterator, memo)
   if list is a "object"
     memo = iterator(memo, value, key) for key, value in list
   else
-    memo = iterator(memo, value, key) for value, key in list
+    memo = iterator(memo, value, index) for value, index in list
 
   return memo
