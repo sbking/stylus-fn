@@ -45,3 +45,7 @@
 #some-hash-even-odd {
   foo: true;
 }
+
+#alias {
+  fn-any: true;
+}

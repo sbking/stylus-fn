@@ -1,3 +1,7 @@
 #contains {
   list1: true;
 }
+
+#alias {
+  fn-include: true;
+}

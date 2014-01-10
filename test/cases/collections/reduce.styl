@@ -30,3 +30,7 @@ hash = {
 
 #reduce-hash-keys
   foo: unquote(fn-reduce(hash, key-list, ""))
+
+#alias
+  fn-inject: fn-inject is fn-reduce
+  fn-foldl: fn-foldl is fn-reduce

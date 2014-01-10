@@ -13,3 +13,7 @@
 #map-hash-double {
   foo: 2 4 6;
 }
+
+#alias {
+  fn-collect: true;
+}

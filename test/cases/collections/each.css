@@ -9,3 +9,7 @@
   b: 2;
   c: 3;
 }
+
+#alias {
+  fn-for-each: true;
+}

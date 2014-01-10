@@ -5,3 +5,7 @@
 #find-hash {
   foo: 4;
 }
+
+#alias {
+  fn-detect: true;
+}

@@ -13,3 +13,7 @@
 #filter-hash-value-key {
   foo: "foo" "bar";
 }
+
+#alias {
+  fn-select: true;
+}

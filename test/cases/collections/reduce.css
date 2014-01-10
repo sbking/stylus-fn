@@ -21,3 +21,8 @@
 #reduce-hash-keys {
   foo: abc;
 }
+
+#alias {
+  fn-inject: true;
+  fn-foldl: true;
+}
