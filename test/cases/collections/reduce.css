@@ -7,7 +7,7 @@
 }
 
 #reduce-list-keys {
-  foo: 012;
+  foo: '012';
 }
 
 #reduce-hash {
@@ -19,7 +19,7 @@
 }
 
 #reduce-hash-keys {
-  foo: abc;
+  foo: 'abc';
 }
 
 #alias {
