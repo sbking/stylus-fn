@@ -1,0 +1,14 @@
+/**
+ * Returns true if the value is present in the list. Uses the in operator
+ * internally, if list is not a hash.
+ */
+
+@import "../types/is-hash"
+
+fn-contains(list, value)
+  if fn-is-hash(list)
+    return true if item is value for key, item in list
+  else
+    return value in list
+    
+  return false

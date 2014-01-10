@@ -1,0 +1,28 @@
+@import "fn/collections/contains"
+
+list1 = {
+  a: 1
+  b: 2
+  c: 3
+}, {
+  b: 3
+  c: 2
+  d: 4
+}, {
+  b: 2
+  c: 3
+  d: 4
+}, {
+  c: 3
+  d: 4
+  e: 5
+}
+
+value = {
+  b: 2
+  c: 3
+  d: 4
+}
+
+#contains
+  list1: fn-contains(list1, value)
