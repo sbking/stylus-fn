@@ -1,0 +1,19 @@
+/**
+ * Returns the minimum value in list. If an iterator function is provided, it
+ * will be used on each value to generate the criterion by which the value is ranked.
+ */
+
+@import "../utility/identity"
+@import "../types/is-hash"
+@import "reduce"
+
+fn-min(list, iterator = null)
+  iterator = iterator or fn-identity
+
+  lesser(other, value, key, list)
+    return iterator(value, key, list) < iterator(other, key, list) ? value : other
+
+  if fn-is-hash(list)
+    return fn-reduce(list, lesser, list[keys(list)[0]])
+  else
+    return fn-reduce(list, lesser, list[0])

@@ -1,0 +1,17 @@
+@import "fn/collections/min"
+
+list = 3 1 2
+hash = {
+  a: 3
+  b: 1
+  c: 2
+}
+
+key-of(value, key, list)
+  return key
+
+#min
+  list-value: fn-min(list)
+  list-key: fn-min(list, key-of)
+  hash-value: fn-min(hash)
+  hash-key: fn-min(hash, key-of)
