@@ -1,0 +1,17 @@
+@import "fn/collections/max"
+
+list = 1 3 2
+hash = {
+  a: 1
+  b: 3
+  c: 2
+}
+
+key-of(value, key, list)
+  return key
+
+#max
+  list-value: fn-max(list)
+  list-key: fn-max(list, key-of)
+  hash-value: fn-max(hash)
+  hash-key: fn-max(hash, key-of)
