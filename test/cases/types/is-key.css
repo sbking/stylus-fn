@@ -1,7 +1,7 @@
-#is-hash {
+#is-key {
   unit: false;
-  ident: false;
-  string: false;
+  ident: true;
+  string: true;
   list-unit: false;
   list-ident: false;
   list-string: false;
@@ -9,6 +9,6 @@
   pairs-unit: false;
   pairs-ident: false;
   pairs-string: false;
-  hash-ident: true;
-  hash-string: true;
+  hash-ident: false;
+  hash-string: false;
 }

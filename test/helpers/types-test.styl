@@ -1,0 +1,36 @@
+unit = 42px
+ident = foo
+string = "foo"
+list-unit = 1 2 3 4
+list-ident = foo bar baz
+list-string = "foo" "bar" "baz"
+list-hash = {
+  foo: "bar"
+}, {
+  baz: "qux"
+}
+pairs-unit = (0 1) (1 2) (2 3) (3 4)
+pairs-ident = (foo "bar") (baz "qux")
+pairs-string = ("foo" "bar") ("baz" "qux")
+hash-ident = {
+  foo: "bar"
+  baz: "qux"
+}
+hash-string = {
+  "foo": "bar"
+  "baz": "qux"
+}
+
+types-test(test)
+  unit: test(unit)
+  ident: test(ident)
+  string: test(string)
+  list-unit: test(list-unit)
+  list-ident: test(list-ident)
+  list-string: test(list-string)
+  list-hash: test(list-hash)
+  pairs-unit: test(pairs-unit)
+  pairs-ident: test(pairs-ident)
+  pairs-string: test(pairs-string)
+  hash-ident: test(hash-ident)
+  hash-string: test(hash-string)
