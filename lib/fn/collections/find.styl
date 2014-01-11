@@ -10,8 +10,8 @@ fn-find(list, iterator = null)
   iterator = iterator or fn-identity
 
   if fn-is-hash(list)
-    return value if iterator(value, key) for key, value in list
+    return value if iterator(value, key, list) for key, value in list
   else
-    return value if iterator(value, index) for value, index in list
+    return value if iterator(value, index, list) for value, index in list
 
 fn-detect = fn-find

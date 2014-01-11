@@ -11,9 +11,9 @@ fn-filter(list, iterator = null)
 
   filter = ()
   if fn-is-hash(list)
-    push(filter, value) if iterator(value, key) for key, value in list
+    push(filter, value) if iterator(value, key, list) for key, value in list
   else
-    push(filter, value) if iterator(value, index) for value, index in list
+    push(filter, value) if iterator(value, index, list) for value, index in list
 
   return filter
 

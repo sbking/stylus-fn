@@ -1,14 +1,14 @@
 @import "fn/collections/every"
 
-is-even(num)
-  return num % 2 is 0
-
 list-true = true true true
 list-false = false false false
 list-true-false = false true false
 list-even = 2 4 6
 list-odd = 1 3 5
 list-even-odd = 1 2 3
+
+is-even(num, key, list)
+  return num % 2 is 0
 
 hash-true = {
   a: true

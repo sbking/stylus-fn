@@ -1,14 +1,14 @@
 @import "fn/collections/each"
 
-pair(value, key)
-  {key}: value
-
 list = 1 2 3
 hash = {
   a: 1
   b: 2
   c: 3
 }
+
+pair(value, key, list)
+  {key}: value
 
 #each-list
   fn-each(list, pair)

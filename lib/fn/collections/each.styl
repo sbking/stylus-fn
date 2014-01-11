@@ -6,8 +6,8 @@
 
 fn-each(list, iterator)
   if fn-is-hash(list)
-    iterator(value, key) for key, value in list
+    iterator(value, key, list) for key, value in list
   else
-    iterator(value, index) for value, index in list
+    iterator(value, index, list) for value, index in list
 
 fn-for-each = fn-each

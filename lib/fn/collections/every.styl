@@ -11,9 +11,9 @@ fn-every(list, iterator = null)
 
   every = true
   if fn-is-hash(list)
-    every = every and iterator(value, key) for key, value in list
+    every = every and iterator(value, key, list) for key, value in list
   else
-    every = every and iterator(value, index) for value, index in list
+    every = every and iterator(value, index, list) for value, index in list
 
   return every
 

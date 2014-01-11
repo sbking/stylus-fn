@@ -1,17 +1,17 @@
 @import "fn/collections/reduce"
 
-add(x, y)
-  return x + y
-
-key-list(memo, value, key)
-  return memo + key
-
 list = 1 2 3
 hash = {
   a: 1
   b: 2
   c: 3
 }
+
+add(x, y, key, list)
+  return x + y
+
+key-list(memo, value, key, list)
+  return memo + key
 
 #reduce-list
   foo: fn-reduce(list, add, 0)

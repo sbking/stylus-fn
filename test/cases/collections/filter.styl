@@ -1,11 +1,5 @@
 @import "fn/collections/filter"
 
-is-even(num)
-  return num % 2 is 0
-
-is-equal(value, other)
-  return value is other
-
 list = 0 3 2 7 5 4 2 11
 hash = {
   a: 0
@@ -19,6 +13,12 @@ hash = {
   "foo": "foo"
   "bar": "bar"
 }
+
+is-even(num, key, list)
+  return num % 2 is 0
+
+is-equal(value, other, list)
+  return value is other
 
 #filter-list-value
   foo: fn-filter(list, is-even)

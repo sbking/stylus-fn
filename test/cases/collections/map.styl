@@ -1,14 +1,14 @@
 @import "fn/collections/map"
 
-double(num)
-  return num * 2
-
 list = 1 2 3
 hash = {
   a: 1
   b: 2
   c: 3
 }
+
+double(num, key, list)
+  return num * 2
 
 #map-list-identity
   foo: fn-map(list)

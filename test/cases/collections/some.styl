@@ -1,8 +1,5 @@
 @import "fn/collections/some"
 
-is-even(num)
-  return num % 2 is 0
-
 list-true = true true true
 list-false = false false false
 list-true-false = false true false
@@ -40,6 +37,9 @@ hash-even-odd = {
   b: 2
   c: 3
 }
+
+is-even(num, key, list)
+  return num % 2 is 0
 
 #some-list-true
   foo: fn-some(list-true)

@@ -1,15 +1,15 @@
 @import "fn/collections/reduce-right"
 
-push-key(list, value, key)
-  push(list, key)
-  return list
-
 list = (1 2) (3 4) (5 6)
 hash = {
   a: 1 2
   b: 3 4
   c: 5 6
 }
+
+push-key(memo, value, key, list)
+  push(memo, key)
+  return memo
 
 #reduce-right-list
   foo: fn-reduce-right(list, push-key, ())

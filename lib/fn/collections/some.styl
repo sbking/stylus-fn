@@ -11,9 +11,9 @@ fn-some(list, iterator = null)
 
   some = false
   if fn-is-hash(list)
-    some = some or iterator(value, key) for key, value in list
+    some = some or iterator(value, key, list) for key, value in list
   else
-    some = some or iterator(value, index) for value, index in list
+    some = some or iterator(value, index, list) for value, index in list
 
   return some
 

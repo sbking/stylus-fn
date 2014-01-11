@@ -12,9 +12,9 @@ fn-map(list, iterator = null)
   map = ()
 
   if fn-is-hash(list)
-    push(map, iterator(value, key)) for key, value in list
+    push(map, iterator(value, key, list)) for key, value in list
   else
-    push(map, iterator(value, index)) for value, index in list
+    push(map, iterator(value, index, list)) for value, index in list
 
   return map
 

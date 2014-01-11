@@ -7,9 +7,9 @@
 
 fn-reduce(list, iterator, memo)
   if fn-is-hash(list)
-    memo = iterator(memo, value, key) for key, value in list
+    memo = iterator(memo, value, key, list) for key, value in list
   else
-    memo = iterator(memo, value, index) for value, index in list
+    memo = iterator(memo, value, index, list) for value, index in list
 
   return memo
 
