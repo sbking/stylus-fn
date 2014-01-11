@@ -13,7 +13,4 @@ fn-min(list, iterator = null)
   lesser(other, value, key, list)
     return iterator(value, key, list) < iterator(other, key, list) ? value : other
 
-  if fn-is-hash(list)
-    return fn-reduce(list, lesser, list[keys(list)[0]])
-  else
-    return fn-reduce(list, lesser, list[0])
+  return fn-reduce(list, lesser, list[fn-is-hash(list) ? keys(list)[0] : 0])
