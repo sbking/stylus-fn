@@ -1,0 +1,21 @@
+/**
+ * The right-associative version of reduce.
+ */
+
+@import "../lists/reverse"
+@import "../types/is-hash"
+@import "../utility/times"
+
+fn-reduce-right(list, iterator, memo)
+  reverse-iterator(memo, value, key, list)
+    return iterator(memo, value, length(list) - key - 1, list)
+
+  if fn-is-hash(list)
+    reverse-keys = fn-reverse(keys(list))
+    memo = iterator(memo, list[key], key, list) for key in reverse-keys
+  else
+    memo = reverse-iterator(memo, value, index, list) for value, index in list
+
+  return memo
+
+fn-foldr = fn-reduce-right

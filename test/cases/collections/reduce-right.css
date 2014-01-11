@@ -1,0 +1,11 @@
+#reduce-right-list {
+  foo: 2 1 0
+}
+
+#reduce-right-hash {
+  foo: 'c' 'b' 'a';
+}
+
+#alias {
+  fn-foldr: true
+}
