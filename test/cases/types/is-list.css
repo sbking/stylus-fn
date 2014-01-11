@@ -1,0 +1,14 @@
+#is-list {
+  unit: true;
+  ident: true;
+  string: true;
+  list-unit: true;
+  list-ident: true;
+  list-string: true;
+  list-hash: true;
+  pairs-unit: true;
+  pairs-ident: true;
+  pairs-string: true;
+  hash-ident: false;
+  hash-string: false;
+}
