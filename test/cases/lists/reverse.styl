@@ -1,0 +1,20 @@
+@import "fn/lists/reverse"
+
+value = 42px
+
+list = 1 2 3 4 5
+
+hashes = {
+  a: 1
+}, {
+  b: 2
+}, {
+  c: 3
+}
+
+hash = fn-reverse(hashes)[0]
+
+#reverse
+  value: fn-reverse(value)
+  list: fn-reverse(list)
+  {hash}

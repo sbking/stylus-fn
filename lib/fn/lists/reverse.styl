@@ -1,0 +1,13 @@
+/**
+ * Returns a new list with the values reversed from the given list
+ */
+
+@import "../types/is-list"
+
+fn-reverse(list)
+  error("Expected list but got " + type(list)) unless fn-is-list(list)
+
+  reverse = ()
+  unshift(reverse, value) for value in list
+
+  return reverse
