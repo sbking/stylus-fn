@@ -1,9 +1,9 @@
 /**
  * Returns the maximum value in list. If an iterator function is provided, it
- * will be used on each value to generate the criterion by which the value is ranked.
+ * will be used on each value to generate the criterion by which the value is
+ * ranked.
  */
 
-@import "../types/is-hash"
 @import "../utility/identity"
 @import "reduce"
 
@@ -13,4 +13,7 @@ fn-max(list, iterator = null)
   greater(value, other, key, list)
     return iterator(value, key, list) > iterator(other, key, list) ? value : other
 
-  return fn-reduce(list, greater, null)
+  if fn-is-hash(list)
+    return fn-reduce(list, greater, list[keys(list)[0]])
+  else
+    return fn-reduce(list, greater, list[0])
